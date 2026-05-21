@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Users, Calendar, MessageSquare, ShieldCheck, MapPin, Coffee } from 'lucide-react';
+import { Users, Calendar, MessageSquare, ShieldCheck, MapPin, Coffee, Tag, Building } from 'lucide-react';
 
 export default function BookingBasecamp() {
   const [orgName, setOrgName] = useState('');
@@ -9,8 +9,8 @@ export default function BookingBasecamp() {
   const [orgType, setOrgType] = useState('Himpunan / BEM');
 
   const getWhatsAppBookingLink = () => {
-    const defaultText = `Halo admin Kedai Santoey, saya ingin reservasi tempat untuk kumpul/rapat.`;
-    const detailText = `\n\nDetail Reservasi:\n- Nama Organisasi: ${orgName || '-'}\n- Jenis: ${orgType}\n- Estimasi Jumlah: ${peopleCount || '-'} orang\n- Rencana Tanggal: ${eventDate || '-'}\n\nMohon info ketersediaan tempat ya min, nuhun!`;
+    const defaultText = `Halo admin Kedai Santoey, saya ingin melakukan reservasi tempat untuk berdiskusi/rapat.`;
+    const detailText = `\n\nDetail Reservasi:\n- Nama Organisasi/Tim: ${orgName || '-'}\n- Kategori Kegiatan: ${orgType}\n- Estimasi Jumlah Peserta: ${peopleCount || '-'} orang\n- Rencana Tanggal: ${eventDate || '-'}\n\nMohon informasi ketersediaan tempatnya ya, terima kasih banyak!`;
     
     const fullText = encodeURIComponent(defaultText + detailText);
     return `https://wa.me/628139875672?text=${fullText}`;
@@ -20,22 +20,22 @@ export default function BookingBasecamp() {
     {
       icon: <ShieldCheck className="w-6 h-6 text-santoey-sage" />,
       title: "Rp 0 Sewa Tempat",
-      desc: "Tidak ada biaya sewa ruangan atau meja. Cukup pesan menu makanan/minuman seikhlasnya."
+      desc: "Tidak dikenakan biaya sewa meja atau area khusus. Cukup memesan menu makanan & minuman pilihan Anda."
     },
     {
       icon: <Users className="w-6 h-6 text-santoey-sage" />,
       title: "Kapasitas 10 - 35 Orang",
-      desc: "Sangat pas dan kondusif untuk belajar kelompok, kumpul panitia, atau rapat divisi kecil."
+      desc: "Sangat pas dan kondusif untuk diskusi kelompok, kumpul panitia, hingga rapat kerja divisi."
     },
     {
       icon: <Coffee className="w-6 h-6 text-santoey-sage" />,
-      title: "Suasana Homey & Akrab",
-      desc: "Pelayanan kekeluargaan dari staf kami yang sangat ramah, bikin sesi kumpul terasa seperti di rumah sendiri."
+      title: "Suasana Homey & Hangat",
+      desc: "Pelayanan ramah penuh kekeluargaan dari staf kami, membuat sesi diskusi kelompok terasa senyaman di rumah sendiri."
     },
     {
       icon: <MapPin className="w-6 h-6 text-santoey-sage" />,
       title: "Parkiran Luas & Aman",
-      desc: "Area parkir motor yang luas di dalam lokasi kedai, aman tanpa drama menghalangi jalan utama."
+      desc: "Area parkir memadai di dalam lokasi kedai, aman dan memberikan ketenangan penuh selama Anda berkumpul."
     }
   ];
 
@@ -54,14 +54,14 @@ export default function BookingBasecamp() {
           >
             <div className="space-y-4">
               <span className="text-santoey-sage font-bold tracking-widest uppercase text-sm">
-                Basecamp Komunitas
+                Ruang Kolaborasi & Komunitas
               </span>
               <h2 className="text-3xl lg:text-4xl font-serif font-bold text-santoey-dark leading-tight">
-                Cari Tempat Rapat Organisasi?<br />
+                Butuh Tempat Rapat atau Kolaborasi?<br />
                 <span className="text-santoey-lightbrown">Kedai Santoey-kan Saja!</span>
               </h2>
               <p className="text-lg text-santoey-brown/80 leading-relaxed">
-                Kami sangat mendukung pergerakan mahasiswa dan komunitas lokal di Bandung. Dapatkan kenyamanan kumpul belajar kelompok atau rapat divisi kecil berkapasitas 10-35 orang dengan suasana hangat tanpa biaya sewa tempat sama sekali.
+                Kami mendukung penuh berbagai aktivitas positif mahasiswa, komunitas kreatif, hingga tim profesional di Bandung. Nikmati kenyamanan ruang kolaborasi berkapasitas 10-35 orang dengan suasana hangat, tanpa ada beban biaya sewa tempat sama sekali.
               </p>
             </div>
 
@@ -70,9 +70,9 @@ export default function BookingBasecamp() {
               {benefits.map((benefit, idx) => (
                 <div 
                   key={idx}
-                  className="bg-white/40 backdrop-blur-md p-6 rounded-3xl border border-white/50 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group cursor-default"
+                  className="bg-white/40 backdrop-blur-md p-6 rounded-3xl border border-white/60 shadow-sm hover:shadow-2xl hover:-translate-y-1.5 hover:border-santoey-sage/40 transition-all duration-300 flex flex-col justify-between group cursor-default"
                 >
-                  <div className="w-12 h-12 bg-santoey-sage/10 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 bg-santoey-sage/10 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-sm">
                     {benefit.icon}
                   </div>
                   <div>
@@ -98,7 +98,7 @@ export default function BookingBasecamp() {
               <div className="text-left space-y-2">
                 <h3 className="text-2xl font-serif font-bold text-santoey-dark">Reservasi Basecamp</h3>
                 <p className="text-sm text-santoey-brown/70">
-                  Isi form berikut untuk membuat draf pesan booking WhatsApp secara instan.
+                  Lengkapi formulir di bawah ini untuk membuat draf pesan booking WhatsApp secara instan.
                 </p>
               </div>
 
@@ -107,52 +107,72 @@ export default function BookingBasecamp() {
                 
                 {/* Jenis Organisasi */}
                 <div className="space-y-1.5">
-                  <label className="text-xs font-bold text-santoey-dark tracking-wide uppercase">Jenis Organisasi</label>
-                  <select 
-                    value={orgType}
-                    onChange={(e) => setOrgType(e.target.value)}
-                    className="w-full bg-white/80 border border-santoey-sage/30 rounded-2xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-santoey-sage/50 text-santoey-dark shadow-inner transition-all cursor-pointer"
-                  >
-                    <option value="Himpunan / BEM">Himpunan Mahasiswa / BEM</option>
-                    <option value="Unit Kegiatan Mahasiswa (UKM)">Unit Kegiatan Mahasiswa (UKM)</option>
-                    <option value="Komunitas Hobi / Sosial">Komunitas Hobi / Sosial</option>
-                    <option value="Tim Tugas / Project">Tim Tugas / Project Kuliah</option>
-                    <option value="Keluarga / Umum">Keluarga / Umum</option>
-                  </select>
+                  <label className="text-xs font-bold text-santoey-dark tracking-wide uppercase">Kategori Kegiatan / Komunitas</label>
+                  <div className="relative">
+                    <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-santoey-sage/75">
+                      <Tag size={18} />
+                    </div>
+                    <select 
+                      value={orgType}
+                      onChange={(e) => setOrgType(e.target.value)}
+                      className="w-full bg-white/80 border border-santoey-sage/30 rounded-2xl pl-11 pr-4 py-3 text-sm text-santoey-dark shadow-inner transition-all duration-200 focus:bg-white focus:border-santoey-sage focus:ring-4 focus:ring-santoey-sage/20 focus:outline-none cursor-pointer"
+                    >
+                      <option value="Himpunan / BEM">Himpunan Mahasiswa / BEM</option>
+                      <option value="Unit Kegiatan Mahasiswa (UKM)">Unit Kegiatan Mahasiswa (UKM)</option>
+                      <option value="Komunitas Kreatif / Sosial">Komunitas Kreatif / Sosial</option>
+                      <option value="Tim Kerja / Proyek">Tim Kerja / Proyek</option>
+                      <option value="Keluarga / Umum">Keluarga / Umum</option>
+                    </select>
+                  </div>
                 </div>
 
                 {/* Nama Organisasi */}
                 <div className="space-y-1.5">
-                  <label className="text-xs font-bold text-santoey-dark tracking-wide uppercase">Nama Organisasi / Komunitas</label>
-                  <input 
-                    type="text" 
-                    placeholder="Contoh: HIMA IF Unisba" 
-                    value={orgName}
-                    onChange={(e) => setOrgName(e.target.value)}
-                    className="w-full bg-white/80 border border-santoey-sage/30 rounded-2xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-santoey-sage/50 text-santoey-dark shadow-inner placeholder-santoey-brown/40"
-                  />
+                  <label className="text-xs font-bold text-santoey-dark tracking-wide uppercase">Nama Organisasi / Tim</label>
+                  <div className="relative">
+                    <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-santoey-sage/75">
+                      <Building size={18} />
+                    </div>
+                    <input 
+                      type="text" 
+                      placeholder="Contoh: Himpunan Mahasiswa atau Tim Proyek Kreatif" 
+                      value={orgName}
+                      onChange={(e) => setOrgName(e.target.value)}
+                      className="w-full bg-white/80 border border-santoey-sage/30 rounded-2xl pl-11 pr-4 py-3 text-sm text-santoey-dark shadow-inner placeholder-santoey-brown/40 transition-all duration-200 focus:bg-white focus:border-santoey-sage focus:ring-4 focus:ring-santoey-sage/20 focus:outline-none"
+                    />
+                  </div>
                 </div>
 
                 {/* Jumlah Orang & Rencana Tanggal */}
                 <div className="grid grid-cols-2 gap-4">
                   <div className="space-y-1.5">
-                    <label className="text-xs font-bold text-santoey-dark tracking-wide uppercase">Jumlah Orang</label>
-                    <input 
-                      type="number" 
-                      placeholder="Contoh: 30" 
-                      value={peopleCount}
-                      onChange={(e) => setPeopleCount(e.target.value)}
-                      className="w-full bg-white/80 border border-santoey-sage/30 rounded-2xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-santoey-sage/50 text-santoey-dark shadow-inner placeholder-santoey-brown/40"
-                    />
+                    <label className="text-xs font-bold text-santoey-dark tracking-wide uppercase">Jumlah Peserta</label>
+                    <div className="relative">
+                      <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-santoey-sage/75">
+                        <Users size={18} />
+                      </div>
+                      <input 
+                        type="number" 
+                        placeholder="Contoh: 25" 
+                        value={peopleCount}
+                        onChange={(e) => setPeopleCount(e.target.value)}
+                        className="w-full bg-white/80 border border-santoey-sage/30 rounded-2xl pl-11 pr-4 py-3 text-sm text-santoey-dark shadow-inner placeholder-santoey-brown/40 transition-all duration-200 focus:bg-white focus:border-santoey-sage focus:ring-4 focus:ring-santoey-sage/20 focus:outline-none"
+                      />
+                    </div>
                   </div>
                   <div className="space-y-1.5">
                     <label className="text-xs font-bold text-santoey-dark tracking-wide uppercase">Rencana Tanggal</label>
-                    <input 
-                      type="date" 
-                      value={eventDate}
-                      onChange={(e) => setEventDate(e.target.value)}
-                      className="w-full bg-white/80 border border-santoey-sage/30 rounded-2xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-santoey-sage/50 text-santoey-dark shadow-inner transition-all cursor-pointer"
-                    />
+                    <div className="relative">
+                      <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-santoey-sage/75">
+                        <Calendar size={18} />
+                      </div>
+                      <input 
+                        type="date" 
+                        value={eventDate}
+                        onChange={(e) => setEventDate(e.target.value)}
+                        className="w-full bg-white/80 border border-santoey-sage/30 rounded-2xl pl-11 pr-4 py-3 text-sm text-santoey-dark shadow-inner transition-all duration-200 focus:bg-white focus:border-santoey-sage focus:ring-4 focus:ring-santoey-sage/20 focus:outline-none cursor-pointer"
+                      />
+                    </div>
                   </div>
                 </div>
 
@@ -163,14 +183,14 @@ export default function BookingBasecamp() {
                 href={getWhatsAppBookingLink()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-4 bg-santoey-sage hover:bg-santoey-sage/90 text-white font-bold rounded-2xl flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transition-all duration-300 transform active:scale-95 group text-sm"
+                className="w-full py-4 bg-santoey-sage hover:bg-santoey-sage/90 text-white font-bold rounded-2xl flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:scale-102 transition-all duration-300 transform active:scale-98 group text-sm"
               >
                 <MessageSquare className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                Kirim Booking ke WhatsApp
+                Ajukan Reservasi Tempat via WA
               </a>
 
               <p className="text-[11px] text-center text-santoey-brown/60">
-                Pesan akan diformat otomatis. Anda dapat meninjau pesan sebelum dikirim di WhatsApp.
+                Pesan reservasi Anda akan dibuat secara otomatis. Anda dapat meninjau isi pesan sebelum dikirimkan ke WhatsApp kami.
               </p>
 
             </div>

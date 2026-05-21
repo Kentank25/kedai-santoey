@@ -5,44 +5,44 @@ import { X, ChevronLeft, ChevronRight, ZoomIn } from 'lucide-react';
 const galleryImages = [
   {
     id: 1,
-    category: "Semi-Outdoor",
-    title: "Pojok Nugas Semi-Outdoor",
-    desc: "Sudut nugas semi-outdoor berkonsep ruang terbuka yang sejuk dan teduh dengan hembusan angin alami kota Bandung. Meja kayu estetik nan luas, didukung pencahayaan yang pas dan colokan listrik lengkap di setiap meja, didesain agar Anda bisa tetap produktif sambil bersantai.",
+    category: "Semi-Outdoor Space",
+    title: "Area Kerja Semi-Outdoor",
+    desc: "Sudut kerja semi-outdoor berkonsep ruang terbuka yang sejuk dan teduh dengan hembusan angin alami kota Bandung. Meja kayu estetik nan luas, didukung pencahayaan alami yang ideal serta stop kontak lengkap di setiap sudut, didesain agar Anda tetap produktif dalam suasana santai yang asri.",
     url: "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFJrk7ar7OX_y6MSfaTxfvVurabhMaHeOgJf58XWJ5ZSi7pUCEJEXbsJ5UiGWVjEraGaoyKJ9Xil8tF4snsD1TZoUizwHIRsbgWYs8reEByu_9AzcKjra8IfSFQYpq-j6nu1ix--9XhkjTt=s680-w680-h510-rw"
   },
   {
     id: 2,
-    category: "Fasilitas WFC",
+    category: "Infrastruktur Produktif",
     title: "Stop Kontak Ganda di Tiap Sudut",
-    desc: "Bukti nyata kepedulian kami pada kenyamanan kerja Anda! Stop kontak ganda berkualitas tinggi terpasang kokoh di dekat area meja beton. Anda bebas mengisi daya laptop, tablet, dan smartphone sekaligus tanpa drama rebutan colokan.",
+    desc: "Kenyamanan kerja dan belajar Anda adalah prioritas utama kami. Stop kontak ganda berkualitas tinggi terpasang kokoh di dekat area meja beton. Anda bebas mengisi daya laptop, tablet, dan gawai sekaligus tanpa khawatir kehabisan daya.",
     url: "/colokan-listrik.png"
   },
   {
     id: 3,
-    category: "Outdoor Space",
-    title: "Suasana Syahdu Outdoor Malam Hari",
-    desc: "Area luar ruangan berkerikil di bawah naungan pohon rindang berhias gemerlap lampu kuning gantung yang hangat. Tempat paling pewe untuk menghirup udara malam Bandung yang sejuk sambil mengobrol santai atau melepas penat setelah seharian nugas.",
+    category: "Outdoor Area",
+    title: "Suasana Tenang Outdoor Malam Hari",
+    desc: "Area luar ruangan berkerikil di bawah naungan pohon rindang berhias gemerlap lampu kuning gantung yang hangat. Area yang ideal untuk menikmati udara malam Bandung yang sejuk sambil berdiskusi santai atau melepas penat setelah seharian beraktivitas.",
     url: "/outdoor-malam.png"
   },
   {
     id: 4,
-    category: "Area Order",
-    title: "Pojok Kasir & Jajanan Kaki Lima",
-    desc: "Lokasi pemesanan utama dengan konsep jendela terbuka yang higienis. Tepat di samping jendela barista, tersedia rak kayu estetik berisi aneka pilihan cemilan ringan manis dan gurih dengan harga sangat murah mulai dari 2 ribuan saja.",
+    category: "Area Kasir & Layanan",
+    title: "Pojok Kasir & Jajanan Tradisional",
+    desc: "Lokasi pemesanan utama dengan konsep jendela terbuka yang praktis dan higienis. Tepat di samping area barista, tersedia rak kayu estetik berisi aneka pilihan camilan ringan manis dan gurih dengan harga sangat bersahabat mulai dari 2 ribu rupiah saja.",
     url: "/kasir-counter.png"
   },
   {
     id: 5,
-    category: "Kuliner Santoey",
-    title: "Menu Kenyang Harga Warung Mahasiswa",
-    desc: "Kami menyajikan aneka masakan hangat lezat porsi kenyang penambah energi nugas seperti mie tek-tek goreng khas Kedai Santoey, sop iga sapi premium, hingga lontong kari lezat dengan banderol harga kaki lima yang bersahabat bagi kantong pelajar.",
+    category: "Menu Kuliner",
+    title: "Hidangan Lezat Mengenyangkan",
+    desc: "Kami menyajikan aneka hidangan hangat lezat porsi mengenyangkan sebagai penambah energi aktivitas, seperti Mie Tek-Tek khas Kedai Santoey, Sop Iga Sapi premium, hingga Lontong Kari gurih dengan banderol harga sangat bersahabat bagi mahasiswa maupun kalangan umum.",
     url: "/mie-tek-tek.png"
   },
   {
     id: 6,
-    category: "Fasilitas Internet",
-    title: "Koneksi WiFi Fiber Optik Dedicated",
-    desc: "Katakan selamat tinggal pada buffering saat Zoom meeting, upload tugas besar, atau push commit coding. Akses internet serat optik berkecepatan tinggi kami disebar melalui router premium untuk menjamin kestabilan koneksi di seluruh area kedai.",
+    category: "Koneksi Cepat",
+    title: "WiFi Fiber Optik Dedicated",
+    desc: "Koneksi internet serat optik berkecepatan tinggi yang stabil, membebaskan Anda dari hambatan saat melakukan rapat video conference, mengunggah dokumen pekerjaan besar, maupun menyelesaikan tugas akademik dari seluruh area kedai.",
     url: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
   }
 ];
@@ -127,7 +127,7 @@ export default function GaleriSpace() {
                 <img 
                   src={img.url} 
                   alt={img.title} 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover group-hover:scale-110 group-hover:rotate-1 transition-all duration-700"
                   loading="lazy"
                 />
                 {/* Overlay Zoom on Hover */}

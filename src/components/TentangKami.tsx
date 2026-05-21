@@ -7,29 +7,29 @@ export default function TentangKami() {
       id: 1,
       icon: <CircleDollarSign className="w-6 h-6 text-santoey-sage" />,
       value: "< Rp15k",
-      label: "Sangat Murah",
-      desc: "Harga menu bersahabat, pas untuk dompet mahasiswa akhir bulan"
+      label: "Harga Terjangkau",
+      desc: "Harga bersahabat, sangat ramah untuk kantong mahasiswa maupun anggaran harian."
     },
     {
       id: 2,
       icon: <Users className="w-6 h-6 text-santoey-sage" />,
       value: "10-35",
-      label: "Kapasitas Cozy",
-      desc: "Sangat pas untuk belajar kelompok atau kumpul komunitas kecil"
+      label: "Kapasitas Nyaman",
+      desc: "Ideal untuk belajar kelompok, kumpul organisasi, hingga rapat kerja divisi."
     },
     {
       id: 3,
       icon: <Clock className="w-6 h-6 text-santoey-sage" />,
       value: "13 Jam",
       label: "Buka Setiap Hari",
-      desc: "Jam operasional 10:00 - 23:00 WIB, siap temani lembur tugas"
+      desc: "Operasional 10:00 - 23:00 WIB, siap menemani produktivitas Anda dari siang hingga malam."
     },
     {
       id: 4,
       icon: <Coffee className="w-6 h-6 text-santoey-sage" />,
       value: "Rp 0",
       label: "Tanpa Biaya Sewa",
-      desc: "Bebas nugas sepuasnya tanpa biaya tambahan per jam"
+      desc: "Bekerja, belajar, dan berdiskusi sepuasnya tanpa khawatir biaya sewa meja per jam."
     }
   ];
 
@@ -50,16 +50,14 @@ export default function TentangKami() {
               Cerita Santoey
             </span>
             <h2 className="text-4xl font-serif font-bold text-santoey-dark leading-tight">
-              Fasilitas Kafe Mewah,<br />
-              <span className="text-santoey-lightbrown">Harga Warung Kaki Lima.</span>
+              Fasilitas Kelas Kafe,<br />
+              <span className="text-santoey-lightbrown">Harga Warung Bersahabat.</span>
             </h2>
             <p className="text-santoey-brown/80 leading-relaxed text-lg">
-              Kami paham drama mahasiswa di Bandung: ingin tempat nugas yang estetik dan tenang, 
-              colokan melimpah, serta internet kencang—tapi dompet menangis karena harga kopi segelas 
-              setara sekali makan sehari.
+              Kami memahami kebutuhan para pelajar, mahasiswa, dan profesional di Bandung: merindukan ruang produktif yang estetik dan tenang, colokan listrik melimpah, serta internet serat optik yang kencang—tanpa harus membayar mahal untuk secangkir kopi.
             </p>
             <p className="text-santoey-brown/80 leading-relaxed">
-              <strong className="font-bold text-santoey-dark">Kedai Santoey</strong> hadir dengan konsep <strong className="font-bold text-santoey-lightbrown">"Fasilitas Kafe, Harga Warung"</strong>. Visual bangunan kami sudah estetik dan "nyantoey" asli secara alami, menghadirkan kenyamanan semi-outdoor yang sejuk khas Bandung. Dengan pelayanan staf yang super ramah dan akrab layaknya sahabat sendiri, Kedai Santoey adalah ruang produktif terbaik untuk nugas mandiri maupun kumpul kelompok kecil tanpa takut boncos.
+              <strong className="font-bold text-santoey-dark">Kedai Santoey</strong> hadir sebagai solusi dengan konsep <strong className="font-bold text-santoey-lightbrown">"Fasilitas Kafe, Harga Warung"</strong>. Visual bangunan semi-outdoor kami yang estetik alami menghadirkan kesegaran udara Bandung yang menenangkan. Didukung oleh pelayanan staf yang sangat hangat dan ramah layaknya sahabat sendiri, Kedai Santoey menjadi ruang kolaborasi terbaik untuk belajar mandiri, bekerja jarak jauh (WFC), hingga diskusi kelompok dengan tenang dan hemat.
             </p>
           </motion.div>
 
@@ -74,13 +72,13 @@ export default function TentangKami() {
             {stats.map((stat) => (
               <div 
                 key={stat.id}
-                className="bg-white/60 backdrop-blur-md p-6 rounded-3xl border border-white/50 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group cursor-default"
+                className="bg-white/60 backdrop-blur-md p-6 rounded-3xl border border-white/60 shadow-sm hover:shadow-2xl hover:-translate-y-1.5 hover:border-santoey-sage/40 transition-all duration-300 flex flex-col justify-between group cursor-default"
               >
                 <div className="flex justify-between items-start mb-4">
-                  <div className="w-12 h-12 bg-santoey-sage/10 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-12 h-12 bg-santoey-sage/10 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-sm shadow-santoey-sage/5">
                     {stat.icon}
                   </div>
-                  <span className="text-3xl font-extrabold text-santoey-dark tracking-tight">
+                  <span className="text-3xl font-extrabold bg-gradient-to-br from-santoey-dark via-santoey-brown to-santoey-lightbrown bg-clip-text text-transparent tracking-tight">
                     {stat.value}
                   </span>
                 </div>

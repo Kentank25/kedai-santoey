@@ -7,19 +7,19 @@ export default function Fasilitas() {
       id: 1,
       icon: <Plug className="w-8 h-8 text-white" />,
       title: "Stop Kontak Ganda",
-      desc: "Tersedia stop kontak ganda berkualitas di setiap sudut meja. Bebas isi daya laptop dan HP sekaligus."
+      desc: "Tersedia stop kontak ganda berkualitas di setiap sudut meja. Mengisi daya laptop dan gawai secara bersamaan menjadi lebih mudah."
     },
     {
       id: 2,
       icon: <Wifi className="w-8 h-8 text-white" />,
       title: "WiFi Fiber Dedicated",
-      desc: "Koneksi internet serat optik berkecepatan tinggi yang stabil untuk pengerjaan tugas berat dan kelancaran Zoom."
+      desc: "Koneksi internet serat optik berkecepatan tinggi yang stabil, dirancang khusus untuk pengerjaan proyek berat serta kelancaran rapat daring."
     },
     {
       id: 3,
       icon: <Wind className="w-8 h-8 text-white" />,
       title: "Semi-Outdoor Sejuk",
-      desc: "Desain area terbuka hijau berkerikil dan teduh dengan hembusan angin alami Bandung, dijamin sejuk bebas pengap."
+      desc: "Desain area terbuka hijau berkerikil yang asri di bawah hembusan angin alami Bandung, menghadirkan kesegaran sirkulasi udara optimal."
     }
   ];
 
@@ -53,7 +53,7 @@ export default function Fasilitas() {
             Fasilitas Andalan WFC
           </h2>
           <p className="text-lg text-santoey-brown/70">
-            Didesain khusus untuk kenyamanan kamu nugas seharian.
+            Didesain khusus untuk menunjang kenyamanan produktivitas Anda sepanjang hari.
           </p>
         </motion.div>
 
@@ -68,9 +68,9 @@ export default function Fasilitas() {
             <motion.div 
               key={f.id} 
               variants={itemVariants}
-              className="bg-white/60 backdrop-blur-md p-8 rounded-3xl border border-white/50 shadow-sm hover:border-santoey-sage/30 transition-all hover:shadow-xl hover:-translate-y-1 group cursor-default"
+              className="bg-white/60 backdrop-blur-md p-8 rounded-3xl border border-white/60 shadow-sm hover:shadow-2xl hover:-translate-y-1.5 hover:border-santoey-sage/40 transition-all duration-300 group cursor-default"
             >
-              <div className="w-16 h-16 bg-santoey-sage rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <div className="w-16 h-16 bg-santoey-sage rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-md shadow-santoey-sage/20">
                 {f.icon}
               </div>
               <h3 className="text-xl font-bold text-santoey-dark mb-3">{f.title}</h3>

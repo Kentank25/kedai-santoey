@@ -1,4 +1,4 @@
-import { Camera, MapPin, Phone, Coffee, ExternalLink } from 'lucide-react';
+import { Instagram, MapPin, Phone, Coffee, ExternalLink } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -15,7 +15,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-white/70 leading-relaxed">
-              Fasilitas kafe, harga warung. Tempat paling pewe buat kelarin tugas tanpa bikin kantong bolong.
+              Menghadirkan fasilitas kafe berkualitas dengan harga warung yang bersahabat. Ruang produktif ternyaman di Bandung untuk belajar, bekerja, dan berkolaborasi.
             </p>
           </div>
 
@@ -23,13 +23,19 @@ export default function Footer() {
           <div>
             <h4 className="font-bold text-lg mb-6 text-white">Hubungi Kami</h4>
             <div className="space-y-4 text-white/70">
-              <a href="https://wa.me/628139875672" className="flex items-center gap-3 hover:text-santoey-sage transition-colors">
+              <a href="https://wa.me/628139875672" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-santoey-sage transition-all duration-300">
                 <Phone size={20} />
                 <span>+62 813-9875-672</span>
               </a>
-              <a href="#" className="flex items-center gap-3 hover:text-santoey-sage transition-colors">
-                <Camera size={20} />
-                <span>@KedaiSantoey</span>
+              <a href="https://instagram.com/kedai.santoey" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-santoey-sage transition-all duration-300">
+                <Instagram size={20} />
+                <span>@kedai.santoey (Instagram)</span>
+              </a>
+              <a href="https://tiktok.com/@kedai.santoey" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-santoey-sage transition-all duration-300">
+                <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.17-2.89-.6-4.09-1.5-1.06-.8-1.8-1.97-2.22-3.23-.03 2.94-.02 5.89-.03 8.83-.07 2.11-.94 4.21-2.61 5.5-1.75 1.43-4.21 1.94-6.41 1.4-2.28-.5-4.24-2.19-4.9-4.42-.92-3.08.31-6.61 3.01-8.25.99-.6 2.12-.91 3.28-.93.01 1.96 0 3.92.01 5.88-.63.02-1.28.2-1.81.56-.9.6-1.39 1.69-1.26 2.76.12 1.13.93 2.11 2.02 2.39.95.26 2.02-.04 2.66-.8.61-.71.82-1.69.78-2.6-.01-5.18 0-10.36-.01-15.54z"/>
+                </svg>
+                <span>@kedai.santoey (TikTok)</span>
               </a>
             </div>
           </div>
