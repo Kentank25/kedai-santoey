@@ -2,6 +2,8 @@ import SEO from './components/SEO';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Fasilitas from './components/Fasilitas';
+import TentangKami from './components/TentangKami';
+import GaleriSpace from './components/GaleriSpace';
 import MenuHighlight from './components/MenuHighlight';
 import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
@@ -14,6 +16,8 @@ function App() {
       <main>
         <Hero />
         <Fasilitas />
+        <TentangKami />
+        <GaleriSpace />
         <MenuHighlight />
         <Testimonials />
       </main>

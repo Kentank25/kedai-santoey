@@ -34,7 +34,7 @@ const fullMenu = [
 
   // MIE
   { id: 23, category: "Mie", title: "Mie godog", price: "17K", image: "https://images.unsplash.com/photo-1585032226651-759b368d7246?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
-  { id: 24, category: "Mie", title: "Mie Tek Tek goreng", price: "17K", image: "https://i.ibb.co.com/8DP0f4HP/IMG-1136.avif" },
+  { id: 24, category: "Mie", title: "Mie Tek Tek goreng", price: "17K", image: "/mie-tek-tek.png" },
   { id: 25, category: "Mie", title: "Indomie goreng", price: "10K", image: "https://images.unsplash.com/photo-1585032226651-759b368d7246?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
   { id: 26, category: "Mie", title: "Indomie kuah bawang", price: "10K", image: "https://images.unsplash.com/photo-1585032226651-759b368d7246?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },
   { id: 27, category: "Mie", title: "Indomie kuah soto", price: "10K", image: "https://images.unsplash.com/photo-1585032226651-759b368d7246?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" },

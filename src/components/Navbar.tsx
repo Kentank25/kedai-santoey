@@ -14,6 +14,8 @@ export default function Navbar() {
           
           <div className="hidden md:flex items-center space-x-8">
             <a href="#fasilitas" className="text-santoey-brown hover:text-santoey-sage transition-colors font-medium">Fasilitas</a>
+            <a href="#tentang" className="text-santoey-brown hover:text-santoey-sage transition-colors font-medium">Tentang</a>
+            <a href="#galeri" className="text-santoey-brown hover:text-santoey-sage transition-colors font-medium">Galeri</a>
             <a href="#menu" className="text-santoey-brown hover:text-santoey-sage transition-colors font-medium">Menu</a>
             <a href="#testimoni" className="text-santoey-brown hover:text-santoey-sage transition-colors font-medium">Testimoni</a>
             <a href="#lokasi" className="text-santoey-brown hover:text-santoey-sage transition-colors font-medium">Lokasi</a>
