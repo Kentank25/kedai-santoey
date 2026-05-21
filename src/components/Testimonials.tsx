@@ -1,4 +1,4 @@
-import { Quote, Star } from 'lucide-react';
+import { Quote, Star, ExternalLink } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function Testimonials() {
@@ -79,6 +79,30 @@ export default function Testimonials() {
             </motion.div>
           ))}
         </div>
+
+        {/* CTA Bagikan Ulasan di Google Maps */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.2 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="mt-16 max-w-2xl mx-auto text-center bg-white/40 backdrop-blur-md p-8 md:p-10 rounded-3xl border border-white/60 shadow-sm hover:shadow-xl transition-all duration-300"
+        >
+          <h3 className="text-xl md:text-2xl font-serif font-bold text-santoey-dark mb-3">
+            Punya Pengalaman Seru di Kedai Santoey?
+          </h3>
+          <p className="text-santoey-brown/80 leading-relaxed mb-6 text-sm md:text-base">
+            Bagikan ulasan berharga Anda saat belajar kelompok, WFC, atau berkumpul bersama komunitas di Google Maps. Setiap ulasan Anda sangat berarti bagi kami untuk terus menyempurnakan kenyamanan fasilitas kedai!
+          </p>
+          <a 
+            href="https://maps.app.goo.gl/oBU2qbX1tPvgYXCq7" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2.5 bg-santoey-brown hover:bg-santoey-lightbrown text-white px-8 py-3.5 rounded-full font-medium transition-all shadow-md hover:shadow-lg hover:scale-105 active:scale-98 cursor-pointer"
+          >
+            Tulis Ulasan di Google Maps <ExternalLink size={18} />
+          </a>
+        </motion.div>
 
       </div>
     </section>
