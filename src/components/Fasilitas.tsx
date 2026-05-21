@@ -1,25 +1,25 @@
-import { Zap, Wifi, Leaf } from 'lucide-react';
+import { Plug, Wifi, Wind } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function Fasilitas() {
   const facilities = [
     {
       id: 1,
-      icon: <Zap className="w-8 h-8 text-white" />,
-      title: "Colokan Melimpah",
-      desc: "Tersedia di tiap sudut meja. Bye-bye drama rebutan colokan."
+      icon: <Plug className="w-8 h-8 text-white" />,
+      title: "Stop Kontak Ganda",
+      desc: "Tersedia stop kontak ganda berkualitas di setiap sudut meja. Bebas isi daya laptop dan HP sekaligus."
     },
     {
       id: 2,
       icon: <Wifi className="w-8 h-8 text-white" />,
-      title: "WiFi Kencang & Stabil",
-      desc: "Upload tugas dan Zoom meeting lancar jaya tanpa lag."
+      title: "WiFi Fiber Dedicated",
+      desc: "Koneksi internet serat optik berkecepatan tinggi yang stabil untuk pengerjaan tugas berat dan kelancaran Zoom."
     },
     {
       id: 3,
-      icon: <Leaf className="w-8 h-8 text-white" />,
-      title: "Suasana Tenang",
-      desc: "Jauh dari bising gerbang kampus. Fokus maksimal, tugas cepat kelar."
+      icon: <Wind className="w-8 h-8 text-white" />,
+      title: "Semi-Outdoor Sejuk",
+      desc: "Desain area terbuka hijau berkerikil dan teduh dengan hembusan angin alami Bandung, dijamin sejuk bebas pengap."
     }
   ];
 

@@ -1,35 +1,35 @@
 import { motion } from 'framer-motion';
-import { Plug, Wifi, CircleDollarSign, Coffee } from 'lucide-react';
+import { CircleDollarSign, Users, Clock, Coffee } from 'lucide-react';
 
 export default function TentangKami() {
   const stats = [
     {
       id: 1,
-      icon: <Plug className="w-6 h-6 text-santoey-sage" />,
-      value: "50+",
-      label: "Colokan Listrik",
-      desc: "Tersedia di setiap sudut meja kaki lima"
+      icon: <CircleDollarSign className="w-6 h-6 text-santoey-sage" />,
+      value: "< Rp15k",
+      label: "Sangat Murah",
+      desc: "Harga menu bersahabat, pas untuk dompet mahasiswa akhir bulan"
     },
     {
       id: 2,
-      icon: <Wifi className="w-6 h-6 text-santoey-sage" />,
-      value: "100 Mbps",
-      label: "WiFi Dedicated",
-      desc: "Koneksi serat optik stabil anti lemot"
+      icon: <Users className="w-6 h-6 text-santoey-sage" />,
+      value: "10-35",
+      label: "Kapasitas Cozy",
+      desc: "Sangat pas untuk belajar kelompok atau kumpul komunitas kecil"
     },
     {
       id: 3,
-      icon: <CircleDollarSign className="w-6 h-6 text-santoey-sage" />,
-      value: "Rp 0",
-      label: "Biaya Sewa Meja",
-      desc: "Nugas seharian sepuasnya tanpa diusir"
+      icon: <Clock className="w-6 h-6 text-santoey-sage" />,
+      value: "13 Jam",
+      label: "Buka Setiap Hari",
+      desc: "Jam operasional 10:00 - 23:00 WIB, siap temani lembur tugas"
     },
     {
       id: 4,
       icon: <Coffee className="w-6 h-6 text-santoey-sage" />,
-      value: "30+",
-      label: "Varian Menu",
-      desc: "Dari sop iga premium hingga indomie sachet"
+      value: "Rp 0",
+      label: "Tanpa Biaya Sewa",
+      desc: "Bebas nugas sepuasnya tanpa biaya tambahan per jam"
     }
   ];
 
@@ -54,15 +54,12 @@ export default function TentangKami() {
               <span className="text-santoey-lightbrown">Harga Warung Kaki Lima.</span>
             </h2>
             <p className="text-santoey-brown/80 leading-relaxed text-lg">
-              Kami tahu betul drama mahasiswa dan freelancer di Bandung: ingin tempat nugas yang estetik, 
-              tenang, colokan melimpah, dan internetnya kencang—tapi dompet langsung menangis karena harga 
-              kopi segelas seharga sekali makan sehari.
+              Kami paham drama mahasiswa di Bandung: ingin tempat nugas yang estetik dan tenang, 
+              colokan melimpah, serta internet kencang—tapi dompet menangis karena harga kopi segelas 
+              setara sekali makan sehari.
             </p>
             <p className="text-santoey-brown/80 leading-relaxed">
-              **Kedai Santoey** didirikan sebagai solusi jalan tengah. Kami menghadirkan suasana nugas WFC 
-              yang super kondusif dan fasilitas setara *co-working space* premium, namun tetap mempertahankan 
-              kearifan lokal berupa harga menu yang bersahabat ala warungan. Di sini, Anda bisa fokus mengejar 
-              impian secara produktif tanpa perlu khawatir isi kantong bolong.
+              <strong className="font-bold text-santoey-dark">Kedai Santoey</strong> hadir dengan konsep <strong className="font-bold text-santoey-lightbrown">"Fasilitas Kafe, Harga Warung"</strong>. Visual bangunan kami sudah estetik dan "nyantoey" asli secara alami, menghadirkan kenyamanan semi-outdoor yang sejuk khas Bandung. Dengan pelayanan staf yang super ramah dan akrab layaknya sahabat sendiri, Kedai Santoey adalah ruang produktif terbaik untuk nugas mandiri maupun kumpul kelompok kecil tanpa takut boncos.
             </p>
           </motion.div>
 
