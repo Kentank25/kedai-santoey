@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --color-santoey-cream: #FDFBF7;
+  --color-santoey-brown: #5C4033;
+  --color-santoey-sage: #8A9A86;
+  --color-santoey-lightbrown: #8B5A2B;
+  --color-santoey-dark: #3E2723;
+}
+
+@layer base {
+  body {
+    @apply bg-santoey-cream text-santoey-brown antialiased scroll-smooth;
+  }
+}
+
+/* Native CSS Horizontal Scroll Utilities */
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Warm Mesh Gradient Background */
+.bg-mesh-warm {
+  background-color: var(--color-santoey-cream);
+  background-image: 
+    radial-gradient(at 0% 0%, hsla(88,11%,56%,0.3) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, hsla(25,32%,35%,0.2) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, hsla(88,11%,56%,0.3) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, hsla(25,32%,35%,0.2) 0px, transparent 50%);
+}
