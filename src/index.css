@@ -34,3 +34,10 @@
     radial-gradient(at 100% 100%, hsla(88,11%,56%,0.3) 0px, transparent 50%),
     radial-gradient(at 0% 100%, hsla(25,32%,35%,0.2) 0px, transparent 50%);
 }
+
+/* Menyembunyikan navbar dengan transisi mewah saat lightbox galeri terbuka */
+body.lightbox-open nav {
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+}

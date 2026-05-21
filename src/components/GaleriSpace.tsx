@@ -64,15 +64,18 @@ export default function GaleriSpace() {
 
   useEffect(() => {
     window.addEventListener('keydown', handleKeyDown);
-    // Disable scroll on body when Lightbox is open
+    // Disable scroll on body & hide navbar when Lightbox is open
     if (selectedIndex !== null) {
       document.body.style.overflow = 'hidden';
+      document.body.classList.add('lightbox-open');
     } else {
       document.body.style.overflow = '';
+      document.body.classList.remove('lightbox-open');
     }
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
       document.body.style.overflow = '';
+      document.body.classList.remove('lightbox-open');
     };
   }, [selectedIndex, handleKeyDown]);
 
