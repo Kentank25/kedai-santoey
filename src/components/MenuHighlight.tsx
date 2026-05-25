@@ -4,52 +4,59 @@ import { MessageSquare } from 'lucide-react';
 
 const fullMenu = [
   // MAKANAN
-  { id: 1, category: "Makanan", title: "Sop Iga Sapi", price: "18K", image: "https://images.unsplash.com/photo-1547592180-85f173990554?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Sop iga sapi hangat berkuah gurih kaya rempah khas Kedai Santoey." },
-  { id: 2, category: "Makanan", title: "Lontong Kari Ayam", price: "15K", image: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Kuah kari kental gurih disajikan dengan lontong lembut dan suwiran ayam melimpah." },
-  { id: 3, category: "Makanan", title: "Nasi Daun Jeruk Ayam Goreng", price: "20K", image: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Nasi wangi daun jeruk yang sedap disajikan dengan ayam goreng bumbu spesial." },
-  { id: 4, category: "Makanan", title: "Nasi Goreng Telur", price: "17K", image: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Nasi goreng bumbu tradisional dengan telur mata sapi/dadar khas kaki lima." },
-  { id: 5, category: "Makanan", title: "Nasi Putih", price: "5K", image: "https://images.unsplash.com/photo-1536304929831-ee1ca9d44906?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Nasi putih hangat berkualitas tinggi." },
-
-  // MINUMAN
-  { id: 6, category: "Minuman", title: "Kopi Seduh Instan", price: "5K", image: "https://images.unsplash.com/photo-1559525839-b184a4d698c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Aneka pilihan kopi sachet instan panas diseduh langsung." },
-  { id: 7, category: "Minuman", title: "Jus Jeruk (Hangat/Dingin)", price: "10K", image: "https://images.unsplash.com/photo-1600271886742-f049cd451bba?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Jus jeruk segar diperas murni, disajikan hangat atau dengan es batu." },
-  { id: 8, category: "Minuman", title: "Jus Alpukat", price: "12K", image: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Jus alpukat kental manis dengan topping kental manis cokelat." },
-  { id: 9, category: "Minuman", title: "Jus Jambu", price: "10K", image: "https://images.unsplash.com/photo-1600271886742-f049cd451bba?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Jus jambu biji merah segar kaya vitamin." },
-  { id: 10, category: "Minuman", title: "Jus Stroberi", price: "12K", image: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Jus stroberi segar asam manis menyegarkan tenggorokan." },
-
-  // MAKANAN PENUTUP
-  { id: 11, category: "Penutup", title: "Roti Bakar", price: "8K", image: "https://images.unsplash.com/photo-1525351484163-7529414344d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Roti panggang cokelat/keju/mentega lezat untuk camilan santai." },
-  { id: 12, category: "Penutup", title: "Es Cincau", price: "10K", image: "https://images.unsplash.com/photo-1558401391-7899b4bd5bbf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Cincau hitam lembut disajikan dengan santan gurih dan gula merah." },
-  { id: 13, category: "Penutup", title: "Es Krim Potong", price: "8K", image: "https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Es krim jadul potong dengan aneka rasa manis nostalgia." },
-  { id: 14, category: "Penutup", title: "Aneka Cemilan", price: "2-12K", image: "https://images.unsplash.com/photo-1599490659213-e2b9527bd087?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Koleksi camilan ringan di rak kayu kasir mulai dari keripik hingga jajanan pasar." },
-
-  // KOPI DAN TEH
-  { id: 15, category: "Kopi & Teh", title: "Americano (Hangat/Dingin)", price: "10K", image: "https://images.unsplash.com/photo-1551030173-122aabc4489c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Seduhan biji kopi arabika pilihan tanpa gula khas WFC." },
-  { id: 16, category: "Kopi & Teh", title: "Latte", price: "15K", image: "https://images.unsplash.com/photo-1558401391-7899b4bd5bbf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Kombinasi espresso kental dengan susu steamed yang lembut berbusa halus." },
-  { id: 17, category: "Kopi & Teh", title: "Capuccino", price: "15K", image: "https://images.unsplash.com/photo-1558401391-7899b4bd5bbf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Kopi khas Italia dengan perbandingan pas susu, espresso, dan foam." },
-  { id: 18, category: "Kopi & Teh", title: "Mocca", price: "15K", image: "https://images.unsplash.com/photo-1558401391-7899b4bd5bbf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Paduan harmonis kopi espresso, susu, dan cokelat pekat." },
-  { id: 19, category: "Kopi & Teh", title: "Aren", price: "15K", image: "https://images.unsplash.com/photo-1558401391-7899b4bd5bbf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Kopi susu gula aren bestseller Kedai Santoey, perpaduan manis gurih yang pas." },
-  { id: 20, category: "Kopi & Teh", title: "Thai Tea", price: "12K", image: "https://images.unsplash.com/photo-1558401391-7899b4bd5bbf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Teh khas Thailand diseduh pekat dipadukan susu kental manis." },
-  { id: 21, category: "Kopi & Teh", title: "Matcha", price: "12K", image: "https://images.unsplash.com/photo-1558401391-7899b4bd5bbf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Minuman teh hijau Jepang premium berpadu susu segar gurih." },
-  { id: 22, category: "Kopi & Teh", title: "Roasted Tea", price: "12K", image: "https://images.unsplash.com/photo-1558401391-7899b4bd5bbf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Hojicha / teh panggang aromatik beraroma smoky berpadu susu." },
+  { id: 1, category: "Makanan", title: "Nasi Sop iga", price: "23K", image: "https://images.unsplash.com/photo-1547592180-85f173990554?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Sop iga sapi hangat berkuah gurih kaya rempah khas Kedai Santoey, disajikan lengkap dengan nasi putih." },
+  { id: 2, category: "Makanan", title: "Nasi Sop ceker", price: "18K", image: "https://images.unsplash.com/photo-1547592180-85f173990554?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Nasi putih hangat disajikan dengan sop ceker ayam gurih, empuk, dan hangat kaya rempah." },
+  { id: 3, category: "Makanan", title: "Sate ayam Nasi/lontong", price: "20K", image: "https://images.unsplash.com/photo-1529042410759-befb1204b468?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Sate ayam bakar khas dengan siraman bumbu kacang gurih melimpah, disajikan dengan pilihan nasi atau lontong." },
+  { id: 4, category: "Makanan", title: "Nasi daun jeruk ayam", price: "20K", image: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Nasi wangi daun jeruk yang sedap disajikan dengan ayam goreng bumbu spesial dan sambal." },
+  { id: 5, category: "Makanan", title: "Nasi goreng telor", price: "18K", image: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Nasi goreng bumbu tradisional dengan telur mata sapi/dadar khas Kedai Santoey." },
+  { id: 6, category: "Makanan", title: "Nasi putih", price: "5K", image: "https://images.unsplash.com/photo-1536304929831-ee1ca9d44906?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Nasi putih hangat berkualitas tinggi." },
 
   // MIE
-  { id: 23, category: "Mie", title: "Mie Godog", price: "17K", image: "https://images.unsplash.com/photo-1585032226651-759b368d7246?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Mie kuah khas Jawa yang kaya bumbu telur, kol, dan potongan cabai rawit." },
-  { id: 24, category: "Mie", title: "Mie Tek-Tek Goreng", price: "17K", image: "/mie-tek-tek.png", desc: "Mie goreng basah wangi khas Kedai Santoey bertabur bawang goreng dan kerupuk." },
-  { id: 25, category: "Mie", title: "Indomie Goreng", price: "10K", image: "https://images.unsplash.com/photo-1585032226651-759b368d7246?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Indomie goreng legendaris disajikan dengan telur setengah matang." },
-  { id: 26, category: "Mie", title: "Indomie Kuah Bawang", price: "10K", image: "https://images.unsplash.com/photo-1585032226651-759b368d7246?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Indomie kuah rasa kaldu ayam bawang hangat berlimpah sawi." },
-  { id: 27, category: "Mie", title: "Indomie Kuah Soto", price: "10K", image: "https://images.unsplash.com/photo-1585032226651-759b368d7246?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Indomie kuah rasa soto dengan perasan jeruk nipis gurih segar." },
+  { id: 7, category: "Mie", title: "Mie godog", price: "18K", image: "https://images.unsplash.com/photo-1585032226651-759b368d7246?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Mie kuah khas Jawa yang kaya bumbu telur, kol, dan potongan cabai rawit." },
+  { id: 8, category: "Mie", title: "Mie Tek Tek goreng", price: "18K", image: "/mie-tek-tek.png", desc: "Mie goreng basah wangi khas Kedai Santoey bertabur bawang goreng dan kerupuk." },
+  { id: 9, category: "Mie", title: "Indomie goreng telor", price: "12K", image: "https://images.unsplash.com/photo-1612927601601-6638404737ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Indomie goreng legendaris disajikan dengan telur matang/setengah matang dan sawi segar." },
+  { id: 10, category: "Mie", title: "Indomie kuah bwng telor", price: "12K", image: "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Indomie kuah rasa kaldu ayam bawang hangat berlimpah sawi dan telur rebus lembut." },
+  { id: 11, category: "Mie", title: "Indomie kuah soto telor", price: "12K", image: "https://images.unsplash.com/photo-1552611052-33e04de081de?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Indomie kuah rasa soto dengan tambahan telur rebus lembut dan perasan jeruk nipis segar." },
 
   // CAMILAN
-  { id: 28, category: "Camilan", title: "Baso Tahu", price: "15K", image: "https://images.unsplash.com/photo-1599490659213-e2b9527bd087?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Baso tahu kukus khas Bandung disiram bumbu kacang gurih pedas manis." },
-  { id: 29, category: "Camilan", title: "Dimsum", price: "15K", image: "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Dimsum ayam kukus hangat lembut disajikan dengan saus cocolan pedas." },
-  { id: 30, category: "Camilan", title: "Cuankie Khas Santoey", price: "16K", image: "https://images.unsplash.com/photo-1599490659213-e2b9527bd087?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Cuankie gurih hangat spesial Kedai Santoey isi siomay, tahu, dan bakso." },
-  { id: 31, category: "Camilan", title: "Kentang & Sosis Goreng", price: "12K", image: "https://images.unsplash.com/photo-1599490659213-e2b9527bd087?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Kentang goreng renyah dipadu potongan sosis goreng nikmat bertabur saus." },
-  { id: 32, category: "Camilan", title: "Paket Gorengan Hangat", price: "6K", image: "https://images.unsplash.com/photo-1599490659213-e2b9527bd087?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Paket gorengan tahu/tempe/bakwan hangat cocol sambal kecap." },
-  { id: 33, category: "Camilan", title: "Risoles", price: "2,5K", image: "https://images.unsplash.com/photo-1599490659213-e2b9527bd087?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Risoles gurih isi sayur/ragout per biji hangat." },
+  { id: 12, category: "Camilan", title: "Baso tahu", price: "15K", image: "https://images.unsplash.com/photo-1599490659213-e2b9527bd087?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Baso tahu kukus khas Bandung disiram bumbu kacang gurih pedas manis." },
+  { id: 13, category: "Camilan", title: "Dimsum", price: "15K", image: "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Dimsum ayam kukus hangat lembut disajikan dengan saus cocolan pedas." },
+  { id: 14, category: "Camilan", title: "Cuankie Santoey", price: "16K", image: "https://images.unsplash.com/photo-1599490659213-e2b9527bd087?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Cuankie gurih hangat spesial Kedai Santoey isi siomay, tahu, dan bakso kuah kaldu murni." },
+  { id: 15, category: "Camilan", title: "Kentang sosis goreng", price: "15K", image: "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Kentang goreng renyah dipadu potongan sosis goreng nikmat bertabur saus." },
+  { id: 16, category: "Camilan", title: "Gorengan Per porsi", price: "10K", image: "https://images.unsplash.com/photo-1599490659213-e2b9527bd087?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Satu porsi gorengan renyah hangat (tahu/tempe/bakwan) pas untuk teman ngopi." },
+  { id: 17, category: "Camilan", title: "Risoles per porsi", price: "10K", image: "https://images.unsplash.com/photo-1599490659213-e2b9527bd087?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Satu porsi risoles gurih isi sayur/ragout lembut hangat." },
+  { id: 18, category: "Camilan", title: "Roti bakar", price: "10K", image: "https://images.unsplash.com/photo-1525351484163-7529414344d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Roti panggang cokelat/keju/mentega lezat untuk camilan santai." },
+  { id: 19, category: "Camilan", title: "Pisang Keju Bakar", price: "10K", image: "https://images.unsplash.com/photo-1566121933407-3c7ccdd26763?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Pisang bakar manis legit bertabur parutan keju melimpah dan siraman susu kental manis." },
+  { id: 20, category: "Camilan", title: "Aneka cemilan", price: "2 - 12 K", image: "https://images.unsplash.com/photo-1599490659213-e2b9527bd087?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Koleksi camilan ringan di rak kayu kasir mulai dari keripik hingga jajanan pasar." },
+
+  // MAKANAN PENUTUP
+  { id: 21, category: "Penutup", title: "Es krim potong", price: "10K", image: "https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Es krim jadul potong dengan aneka rasa manis nostalgia." },
+  { id: 22, category: "Penutup", title: "Banana split", price: "15K", image: "https://images.unsplash.com/photo-1579954115545-a95591f28bfc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Paduan pisang manis dengan tiga scoop es krim lembut dan saus cokelat." },
+
+  // KOPI
+  { id: 23, category: "Kopi", title: "Americano", price: "13K", image: "https://images.unsplash.com/photo-1551030173-122aabc4489c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Seduhan biji kopi arabika pilihan tanpa gula khas WFC, disajikan hangat/dingin." },
+  { id: 24, category: "Kopi", title: "Latte", price: "18K", image: "https://images.unsplash.com/photo-1558401391-7899b4bd5bbf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Kombinasi espresso kental dengan susu steamed yang lembut berbusa halus." },
+  { id: 25, category: "Kopi", title: "Capuccino", price: "18K", image: "https://images.unsplash.com/photo-1534778101976-62847782c213?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Kopi khas Italia dengan perbandingan pas susu, espresso, dan foam tebal." },
+  { id: 26, category: "Kopi", title: "Mocca /coklat", price: "18K", image: "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Paduan harmonis kopi espresso, susu segar, dan cokelat pekat." },
+  { id: 27, category: "Kopi", title: "Aren", price: "18K", image: "https://images.unsplash.com/photo-1517701604599-bb29b565090c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Kopi susu gula aren bestseller Kedai Santoey, perpaduan manis gurih yang pas." },
+  { id: 28, category: "Kopi", title: "V Drip Coffee", price: "20K", image: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Kopi saring ala Vietnam dengan susu kental manis, bercita rasa pekat dan manis gurih." },
+  { id: 29, category: "Kopi", title: "Aneka kopi seduh", price: "6K", image: "https://images.unsplash.com/photo-1559525839-b184a4d698c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Aneka pilihan kopi sachet instan panas diseduh langsung." },
+
+  // MINUMAN (TEH & JUICE)
+  { id: 30, category: "Minuman", title: "Matcha", price: "15K", image: "https://images.unsplash.com/photo-1536256263959-770b48d82b0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Minuman teh hijau Jepang premium berpadu susu segar gurih." },
+  { id: 31, category: "Minuman", title: "Thai Tea", price: "15K", image: "https://images.unsplash.com/photo-1483916174627-ae3c627f1901?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Teh khas Thailand diseduh pekat dipadukan susu kental manis." },
+  { id: 32, category: "Minuman", title: "Roasted Tea", price: "15K", image: "https://images.unsplash.com/photo-1597481499750-3e6b22637e12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Hojicha / teh panggang aromatik beraroma smoky berpadu susu." },
+  { id: 33, category: "Minuman", title: "Lemon Tea", price: "10K", image: "https://images.unsplash.com/photo-1515688594390-b649af70d282?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Teh lemon segar asam manis menyegarkan tenggorokan." },
+  { id: 34, category: "Minuman", title: "Sweet Tea", price: "7K", image: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Es teh manis klasik segar beraroma melati pelepas dahaga." },
+  { id: 35, category: "Minuman", title: "Juice Jeruk", price: "10K", image: "https://images.unsplash.com/photo-1600271886742-f049cd451bba?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Jus jeruk segar diperas murni, disajikan hangat atau dengan es batu." },
+  { id: 36, category: "Minuman", title: "Juice alpukat", price: "13K", image: "https://images.unsplash.com/photo-1541832676-9b763b0239ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Jus alpukat kental manis dengan topping kental manis cokelat." },
+  { id: 37, category: "Minuman", title: "Juice jambu", price: "10K", image: "https://images.unsplash.com/photo-1534353473418-4cfa6c56fd38?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Jus jambu biji merah segar kaya vitamin." },
+  { id: 38, category: "Minuman", title: "Juice strawberry", price: "12K", image: "https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Jus stroberi segar asam manis menyegarkan." },
+  { id: 39, category: "Minuman", title: "Juice mangga", price: "12K", image: "https://images.unsplash.com/photo-1553118249-0d858e97c595?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Jus mangga manis harum bertekstur kental segar buah pilihan." },
+  { id: 40, category: "Minuman", title: "Es Sirup Cingcau", price: "15K", image: "https://images.unsplash.com/photo-1558401391-7899b4bd5bbf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", desc: "Cincau hitam lembut disajikan dengan santan gurih, sirup wangi, dan es batu segar." },
 ];
 
-const categories = ["Makanan", "Mie", "Camilan", "Kopi & Teh", "Minuman", "Penutup", "Paket Hemat"];
+const categories = ["Makanan", "Mie", "Camilan", "Kopi", "Minuman", "Penutup", "Paket Hemat"];
 
 export default function MenuHighlight() {
   const [activeTab, setActiveTab] = useState("Makanan");
@@ -133,21 +140,15 @@ export default function MenuHighlight() {
                   key={item.id} 
                   className="bg-white/60 backdrop-blur-md rounded-3xl overflow-hidden border border-white/60 shadow-sm hover:shadow-2xl hover:-translate-y-1.5 hover:border-santoey-sage/40 transition-all duration-300 group flex flex-col"
                 >
-                  <div className="h-48 overflow-hidden relative">
-                    <img 
-                      src={item.image} 
-                      alt={item.title} 
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      loading="lazy"
-                    />
-                    <div className="absolute top-3 left-3 bg-santoey-brown/90 text-white text-xs px-3 py-1 rounded-full backdrop-blur-sm">
-                      {item.category}
-                    </div>
-                  </div>
-                  <div className="p-5 flex flex-col flex-grow">
+                  <div className="p-6 flex flex-col flex-grow">
                     <div className="flex justify-between items-start mb-4 gap-2">
-                      <h3 className="text-lg font-bold text-santoey-dark leading-tight">{item.title}</h3>
-                      <span className="font-semibold text-santoey-sage whitespace-nowrap bg-santoey-sage/10 px-2 py-1 rounded-md">{item.price}</span>
+                      <div className="space-y-1">
+                        <span className="inline-block text-[10px] uppercase font-bold tracking-wider text-santoey-sage bg-santoey-sage/10 px-2.5 py-0.5 rounded-full">
+                          {item.category}
+                        </span>
+                        <h3 className="text-lg font-bold text-santoey-dark leading-tight">{item.title}</h3>
+                      </div>
+                      <span className="font-semibold text-santoey-sage whitespace-nowrap bg-santoey-sage/10 px-2.5 py-1 rounded-md text-sm">{item.price}</span>
                     </div>
                     {/* Deskripsi menu / rincian paket hemat */}
                     {'desc' in item && item.desc && (

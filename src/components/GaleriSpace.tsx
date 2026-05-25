@@ -8,7 +8,7 @@ const galleryImages = [
     category: "Semi-Outdoor Space",
     title: "Area Kerja Semi-Outdoor",
     desc: "Sudut kerja semi-outdoor berkonsep ruang terbuka yang sejuk dan teduh dengan hembusan angin alami kota Bandung. Meja kayu estetik nan luas, didukung pencahayaan alami yang ideal serta stop kontak lengkap di setiap sudut, didesain agar Anda tetap produktif dalam suasana santai yang asri.",
-    url: "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFJrk7ar7OX_y6MSfaTxfvVurabhMaHeOgJf58XWJ5ZSi7pUCEJEXbsJ5UiGWVjEraGaoyKJ9Xil8tF4snsD1TZoUizwHIRsbgWYs8reEByu_9AzcKjra8IfSFQYpq-j6nu1ix--9XhkjTt=s680-w680-h510-rw"
+    url: "/suasana-kedai.jpg"
   },
   {
     id: 2,
